@@ -72,7 +72,7 @@ proxy.on('proxyRes', function (proxyRes, req, res) {
     var doc = {
       _id: req.url,
       ts: new Date(),
-      statusCode: proxyRes.statusCode,
+      status: proxyRes.statusCode,
       headers: proxyRes.headers,
       body: Buffer.concat(buffers)
     }
@@ -107,7 +107,7 @@ var server = http.createServer(function (req, res) {
       if (err) opbeat.captureError(err)
       if (!doc) return forwardRequest(req, res)
       console.log('cache %s %s', req.method, req.url)
-      res.writeHead(doc.statusCode, doc.headers)
+      res.writeHead(doc.status, doc.headers)
       res.end(doc.body.buffer)
     })
   } else {
