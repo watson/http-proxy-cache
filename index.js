@@ -24,7 +24,8 @@ var headerOrder = [
 ]
 
 var removeHeaders = [
-  'x-cache-preferred'
+  'x-cache-preferred',
+  'x-proxy-auth'
 ]
 
 var sortHeaders = function (a, b) {
@@ -96,6 +97,11 @@ var forwardRequest = function (req, res) {
 }
 
 var server = http.createServer(function (req, res) {
+  if (process.env.PROXY_AUTH && process.env.PROXY_AUTH !== req.headers['x-proxy-auth']) {
+    res.writeHead(401)
+    res.end()
+    return
+  }
   if (req.method === 'GET' && 'x-cache-preferred' in req.headers) {
     db.cache.findOne({ _id: req.url }, function (err, doc) {
       if (err) opbeat.captureError(err)

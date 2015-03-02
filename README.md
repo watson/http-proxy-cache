@@ -13,6 +13,9 @@ A caching HTTP forward proxy.
 - Forwards all requests to the target by default (i.e. cache not used)
 - Prefers the content in the cache if the `X-Cache-Preferred` header is
   present (this header is never sent to the target)
+- If environment variable `PROXY_AUTH` is set, the proxy will reject all
+  incoming requests that doesn't have a header `X-Proxy-Auth` with the
+  same value
 
 ## Prerequisites
 
