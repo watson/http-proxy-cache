@@ -35,6 +35,25 @@ To start the proxy, simply run:
 http-proxy-cache
 ```
 
+## Example usage
+
+This is an example app that uses the
+[request module](https://github.com/request/request) to perform a HTTP
+request via the proxy to [httpbin](http://httpbin.org) which will echo
+the HTTP request back as the reponse body:
+
+```js
+var request = require('request')
+
+request({
+  uri: 'http://httpbin.org/get',
+  proxy: 'http://<your-proxy-domain-here>'
+}, function (err, res, body) {
+  if (err) throw err
+  console.log(body)
+})
+```
+
 ## Debug
 
 Set the environment variable `DEBUG=proxy` to enable debug mode.
