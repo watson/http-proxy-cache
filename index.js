@@ -96,7 +96,7 @@ var forwardRequest = function (req, res) {
 }
 
 var server = http.createServer(function (req, res) {
-  if (req.method === 'GET' && 'x-cache-mode' in req.headers) {
+  if (req.method === 'GET' && 'x-cache-preferred' in req.headers) {
     db.cache.findOne({ _id: req.url }, function (err, doc) {
       if (err) opbeat.captureError(err)
       if (!doc) return forwardRequest(req, res)
