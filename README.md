@@ -16,8 +16,8 @@ A caching HTTP forward proxy.
 
 ## Prerequisites
 
-- MongoDB (use the environment variable `MONGO_URI` to specify
-  connection string - defaults to: `localhost/http-proxy-cache`)
+- MongoDB - Use the environment variable `MONGO_URI` to specify
+  connection string (defaults to: `localhost/http-proxy-cache`)
 - Optional: [Opbeat](https://opbeat.com) account for error logging
   configured using environment variables
 
