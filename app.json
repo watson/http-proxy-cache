@@ -4,16 +4,20 @@
   "repository": "https://github.com/watson/http-proxy-cache",
   "env": {
     "MONGO_URI": {
-      "description": "MongoDB connection string"
+      "description": "MongoDB connection string",
+      "required": false
     },
     "OPBEAT_ORGANIZATION_ID": {
-      "description": "Opbeat organization id (optional)"
+      "description": "Opbeat organization id",
+      "required": false
     },
     "OPBEAT_APP_ID": {
-      "description": "Opbeat app id (optional)"
+      "description": "Opbeat app id",
+      "required": false
     },
     "OPBEAT_SECRET_TOKEN": {
-      "description": "Opbeat secret token (optional)"
+      "description": "Opbeat secret token",
+      "required": false
     }
   }
 }
