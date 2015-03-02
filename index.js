@@ -7,7 +7,7 @@ var http = require('http')
 var debug = require('debug')('proxy')
 var httpProxy = require('http-proxy')
 
-var db = require('mongojs')(process.env.MONGO_URI || 'localhost/http-proxy-cache', ['cache'])
+var db = require('mongojs')(process.env.MONGOLAB_URI || process.env.MONGO_URI || 'localhost/http-proxy-cache', ['cache'])
 
 var headerOrder = [
   'host',

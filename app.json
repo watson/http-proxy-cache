@@ -3,10 +3,6 @@
   "description": "A caching HTTP forward proxy",
   "repository": "https://github.com/watson/http-proxy-cache",
   "env": {
-    "MONGO_URI": {
-      "description": "MongoDB connection string",
-      "required": false
-    },
     "OPBEAT_ORGANIZATION_ID": {
       "description": "Opbeat organization id",
       "required": false
@@ -19,5 +15,8 @@
       "description": "Opbeat secret token",
       "required": false
     }
-  }
+  },
+  "addons": [
+    "mongolab"
+  ]
 }
