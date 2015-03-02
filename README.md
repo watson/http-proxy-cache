@@ -23,17 +23,17 @@ A caching HTTP forward proxy.
 
 ## Installation
 
-To setup a simple http-proxy-cache on Heroku just click this button:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-Alternatively, to install locally just run:
-
 ```
 npm install http-proxy-cache -g
 ```
 
-And then start the proxy using the command `http-proxy-cache`.
+## Start
+
+To start the proxy, simply run:
+
+```
+http-proxy-cache
+```
 
 ## Debug
 
