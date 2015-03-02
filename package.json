@@ -1,0 +1,43 @@
+{
+  "name": "http-proxy-cache",
+  "version": "1.0.0",
+  "description": "A caching HTTP forward proxy.",
+  "main": "index.js",
+  "bin": {
+    "http-proxy-cache": "./bin/http-proxy-cache"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Thomas Watson Steen <w@tson.dk>",
+  "dependencies": {
+    "debug": "^2.1.2",
+    "http-proxy": "^1.8.1",
+    "mongojs": "^0.18.2",
+    "opbeat": "^1.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watson/http-proxy-cache.git"
+  },
+  "keywords": [
+    "http",
+    "proxy",
+    "cache",
+    "caching",
+    "cached",
+    "mongo",
+    "mongodb",
+    "forward"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/http-proxy-cache/issues"
+  },
+  "homepage": "https://github.com/watson/http-proxy-cache",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
