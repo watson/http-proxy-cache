@@ -1,6 +1,6 @@
 {
   "name": "http-proxy-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A caching HTTP forward proxy.",
   "main": "index.js",
   "bin": {
