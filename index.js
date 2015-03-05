@@ -28,6 +28,8 @@ var removeHeaders = [
   'x-proxy-auth'
 ]
 
+var password = process.env.PROXY_AUTH
+
 var sortHeaders = function (a, b) {
   a = headerOrder.indexOf(a)
   b = headerOrder.indexOf(b)
@@ -97,7 +99,7 @@ var forwardRequest = function (req, res) {
 }
 
 var server = http.createServer(function (req, res) {
-  if (process.env.PROXY_AUTH && process.env.PROXY_AUTH !== req.headers['x-proxy-auth']) {
+  if (password && password !== req.headers['x-proxy-auth']) {
     res.writeHead(401)
     res.end()
     return
