@@ -49,7 +49,7 @@ var camelCaseHeader = function (header) {
 }
 
 var proxy = httpProxy.createProxyServer({
-  agent: new http.Agent({ maxSockets: 1 })
+  agent: new http.Agent({ maxSockets: Infinity })
 })
 
 proxy.on('proxyReq', function (proxyReq, req, res, options) {
