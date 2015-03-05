@@ -18,7 +18,7 @@ var server = http.createServer(function (req, res) {
   setTimeout(function () {
     count++
     res.end()
-  }, 100)
+  }, 500)
 }).listen(function () {
   var target = 'http://localhost:' + server.address().port
 
@@ -39,7 +39,7 @@ var server = http.createServer(function (req, res) {
       var runtime = Date.now() - start
       t.error(err)
       t.equal(count, total)
-      t.ok(runtime < 1600, 'run time higher than expected: ' + runtime)
+      t.ok(runtime < 2000, 'run time (' + runtime + ') should be below ' + 2000)
       t.end()
     })
     for (var n = 1; n <= total; n++) request(target + '/' + n, next())
