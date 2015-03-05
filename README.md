@@ -4,6 +4,8 @@ A caching HTTP forward proxy.
 
 [![Build status](https://travis-ci.org/watson/http-proxy-cache.svg?branch=master)](https://travis-ci.org/watson/http-proxy-cache)
 
+[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
+
 **Features:**
 
 - 100% transparent

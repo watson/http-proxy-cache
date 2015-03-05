@@ -7,7 +7,7 @@
     "http-proxy-cache": "./bin/http-proxy-cache"
   },
   "scripts": {
-    "test": "PORT=8082 MONGO_URI=localhost/http-proxy-cache-test tape test.js",
+    "test": "standard && PORT=8082 MONGO_URI=localhost/http-proxy-cache-test tape test.js",
     "start": "node index.js"
   },
   "author": "Thomas Watson Steen <w@tson.dk>",
@@ -20,6 +20,7 @@
   "devDependencies": {
     "after-all": "^2.0.1",
     "request": "^2.53.0",
+    "standard": "*",
     "tape": "^3.5.0"
   },
   "repository": {
