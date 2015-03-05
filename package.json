@@ -7,7 +7,7 @@
     "http-proxy-cache": "./bin/http-proxy-cache"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "PORT=8082 MONGO_URI=localhost/http-proxy-cache-test tape test.js",
     "start": "node index.js"
   },
   "author": "Thomas Watson Steen <w@tson.dk>",
@@ -17,7 +17,11 @@
     "mongojs": "^0.18.2",
     "opbeat": "^1.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "after-all": "^2.0.1",
+    "request": "^2.53.0",
+    "tape": "^3.5.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/watson/http-proxy-cache.git"
