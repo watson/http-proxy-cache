@@ -2,6 +2,8 @@
 
 A caching HTTP forward proxy.
 
+[![Build status](https://travis-ci.org/watson/http-proxy-cache.svg?branch=master)](https://travis-ci.org/watson/http-proxy-cache)
+
 **Features:**
 
 - 100% transparent
